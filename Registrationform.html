@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Registration</title>
+
+    <script type="text/javascript">
+        function validate()
+        {
+            var fullname = document.getElementById("fullName");
+            var number = document.getElementById("phoneNumber");
+            var password = document.getElementById("password");
+            var cpassword = document.getElementById("confirmpassword");
+            
+             if(fullname.value =="" || number.value =="" || password.value =="" || cpassword.value=="" )
+             {
+                alert("No blank values allowed");
+                return false;
+             } 
+             else
+             {
+                true;
+             }
+        }
+       
+
+    </script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-title">Student Registration</h1>
+        <form onsubmit=" return validate()" action="msg.html">
+            <div class="main-user-info">
+            <div class="user-input-box">
+                <label for="fullName">Full Name</label>
+                <input type="text"
+                 id="fullName" 
+                 name="fullName"
+                 placeholder="Enter Full Name" required/>
+            </div>
+            <div class="user-input-box">
+
+                <label for="bday">Birth Date</label>
+                <input type="date"
+                 id="bday" 
+                 name="bday"
+                 placeholder="Enter BirthDate" required/>
+
+            </div>
+
+            <div class="user-input-box">
+                <label for="email">Email</label>
+                <input type="email"
+                 id="email" 
+                 name="email"
+                 placeholder="Enter Email"/>
+
+            </div>
+
+            <div class="user-input-box">
+                <label for="phoneNumber">Mobile No.</label>
+                <input type="text"
+                 id="phoneNumber" 
+                 name="phoneNumber"
+                 placeholder="Enter Phone Number" required/>
+
+            </div>
+
+
+            <div class="user-input-box">
+                <label for="password">Password</label>
+                <input type="password"
+                 id="password" 
+                 name="password"
+                 placeholder="Enter Password" required/>
+
+            </div>
+
+            <div class="user-input-box">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password"
+                 id="confirmpassword" 
+                 name="confirmpassword"
+                 placeholder="Confirm Password" required/>
+
+            </div>
+
+
+            </div>
+
+            <div class="gender-detail-box">
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <br><br>
+           
+           <button onclick="validate()"
+           type="submit">Submit</button>
+        </form> 
+    
+    </div>
+</body>
+</html>
